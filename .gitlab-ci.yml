@@ -13,7 +13,7 @@ test:
   stage: test
   script:
     
-    - echo "hola"
+    - echo "holaA"
   tags:
     - shell
 
