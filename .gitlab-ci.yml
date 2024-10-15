@@ -1,0 +1,18 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - echo "Building the image"
+  tags:
+    - shell
+
+test:
+  stage: test
+  script:
+    
+    - echo "hola mundo test"
+  tags:
+    - shell
