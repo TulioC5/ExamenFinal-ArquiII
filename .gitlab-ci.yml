@@ -7,7 +7,7 @@ build:
   script:
     - echo "Building the image"
   tags:
-    - shell, shared
+    - shell,shared
 
 test:
   stage: test
@@ -15,4 +15,4 @@ test:
     
     - echo "hola mundo test"
   tags:
-    - shell, shared
+    - shell,shared
