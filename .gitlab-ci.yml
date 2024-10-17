@@ -7,7 +7,7 @@ build:
   script:
     - echo "Building the image"
   tags:
-    - shell
+    - shell1
 
 test:
   stage: test
@@ -15,5 +15,5 @@ test:
     
     - echo "holaA"
   tags:
-    - shell
+    - shell1
 
