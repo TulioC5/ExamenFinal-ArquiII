@@ -7,13 +7,13 @@ build:
   script:
     - echo "Building the image"
   tags:
-    - shell1
+    - shell
 
 test:
   stage: test
   script:
     
-    - echo "hola"
+    - echo "hola running"
   tags:
-    - shell1
+    - shell
 
