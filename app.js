@@ -21,7 +21,7 @@ app.post('/users', (req, res) => {
     const { name, email } = req.body;
 
     if (!name || !email) {
-        return res.status(400).json({ error: 'Nombre y correo electrónico son requeridos' });
+        return res.status(400).json({ error: 'Nombree y correo electrónico son requeridos' });
     }
 
     const stmt = db.prepare("INSERT INTO users (name, email) VALUES (?, ?)");

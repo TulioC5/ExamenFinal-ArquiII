@@ -5,13 +5,15 @@ stages:
 build:
   stage: build
   script:
-    - echo "Building the image"
+    - echo "Instalando dependencias"
+    - npm install
   tags:
     - docker_shell
 
 test:
   stage: test
   script:
-    - echo "hola"
+    - echo "Ejecutando pruebas"
+    - npm test
   tags:
     - docker_shell
