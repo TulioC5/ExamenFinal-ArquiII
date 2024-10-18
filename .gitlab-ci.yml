@@ -1,27 +1,9 @@
-# stages:
-#   - build
-#   - test
-
-# build:
-#   stage: build
-#   script:
-#     - echo "Instalando dependencias"
-#     - npm install
-#   tags:
-#     - docker_shell
-
-# test:
-#   stage: test
-#   script:
-#     - echo "Ejecutando pruebas"
-#     - npm test
-#   tags:
-#     - docker_shell
+stages:
+  - test
 
 test_job:
   stage: test
   tags:
     - docker_shell
   script:
-    - echo "Hello, world!"
-
+    - echo "Running test job"
