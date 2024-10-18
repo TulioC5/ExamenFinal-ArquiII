@@ -2,14 +2,22 @@
   "name": "node",
   "version": "1.0.0",
   "description": "prueba",
-  "main": "app.js",
+  "main": "app.js", 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"  
   },
   "repository": {
     "type": "git",
     "url": "http://hostname/umg/apps/arqui-ii.git"
   },
   "author": "tc",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",  
+    "sqlite3": "*",  
+    "body-parser": "^1.20.2" 
+  }
 }
+
+
