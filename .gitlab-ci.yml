@@ -4,6 +4,6 @@ stages:
 test_job:
   stage: test
   tags:
-    - docker_shell
+    - shell
   script:
     - echo "Running test joob"
