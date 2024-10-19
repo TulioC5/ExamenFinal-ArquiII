@@ -6,4 +6,4 @@ test_job:
   tags:
     - docker_shell
   script:
-    - echo "Running test job"
+    - echo "Running test joob"
