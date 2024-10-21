@@ -14,12 +14,11 @@ before_script:
   - echo $CI_COMMIT_SHORT_SHA
   - echo "Iniciando pipeline y verificando Docker...0"
   #- docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
-  - docker info
-
+  
 build_image:
   stage: build
   tags:
     - docker_shell
   script:
     - echo "Building stagee. .."
-    #- docker build -t
+    - docker build -t $IMAGE_NAME:$IMAGE_TAG .
