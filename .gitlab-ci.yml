@@ -3,7 +3,7 @@ stages:
   - publish_image
 
 variables:
-  IMAGE_NAME: 192.168.0.3:5002/repository/ltepett/python
+  IMAGE_NAME: 172.20.10.5:5002/repository/tcurup-docker/nodejs
   IMAGE_TAG: $CI_COMMIT_SHORT_SHA
   VERSION_DE_MI_APP: 1.0
 
@@ -14,7 +14,7 @@ before_script:
   - echo $CI_COMMIT_SHORT_SHA
   - echo "Iniciando pipeline y verificando Docker...0"
   #- docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
-  
+
 build_image:
   stage: build
   tags:
