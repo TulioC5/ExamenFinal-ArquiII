@@ -1,9 +1,17 @@
 stages:
+  - build
   - test
 
-test_job:
-  stage: test
-  tags:
-    - shell
+build:
+  stage: build
   script:
-    - echo "Running test joob"
+    - echo "Building the image"
+  tags:
+    - docker_shell
+
+test:
+  stage: test
+  script:
+    - echo "Running the tests"
+  tags:
+    - docker_shell
