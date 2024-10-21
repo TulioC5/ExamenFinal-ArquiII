@@ -1,17 +1,25 @@
 stages:
   - build
-  - test
+  - publish_image
 
-build:
+variables:
+  IMAGE_NAME: 192.168.0.3:5002/repository/ltepett/python
+  IMAGE_TAG: $CI_COMMIT_SHORT_SHA
+  VERSION_DE_MI_APP: 1.0
+
+before_script:
+  - echo $CI_JOB_TOKEN
+  - echo $IMAGE_NAME
+  - echo $VERSION_DE_MI_APP
+  - echo $CI_COMMIT_SHORT_SHA
+  - echo "Iniciando pipeline y verificando Docker...0"
+  #- docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
+  - docker info
+
+build_image:
   stage: build
-  script:
-    - echo "Building the image"
   tags:
     - docker_shell
-
-test:
-  stage: test
   script:
-    - echo "Running the tests"
-  tags:
-    - docker_shell
+    - echo "Building stage. .."
+    #- docker build -t
