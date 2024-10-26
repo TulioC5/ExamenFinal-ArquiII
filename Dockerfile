@@ -1,6 +1,10 @@
 FROM node:latest
 WORKDIR /app
+
+COPY package*.json ./
+RUN npm install  # Instala las dependencias dentro del contenedor Docker
+
 COPY . .
-RUN npm install
-CMD ["node", "app.js"]
+
 EXPOSE 3000
+CMD ["node", "app.js"]
