@@ -7,7 +7,7 @@ COPY package*.json ./
 # Elimina cualquier instalación previa de sqlite3 y reinstala
 RUN npm install sqlite3 && npm install
 
-# Copia el resto del código fuente
+# Copia el resto del código fuenteeee
 COPY . .
 
 EXPOSE 3000
