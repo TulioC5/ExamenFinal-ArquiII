@@ -13,7 +13,9 @@ before_script:
   - echo $VERSION_DE_MI_APP
   - echo $CI_COMMIT_SHORT_SHA
   - echo "Iniciando pipeline y verificando Docker...000"
-  - docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
+  # - docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
+  - echo $NEXUS_PASSWORD | docker login $NEXUS_HOST -u $NEXUS_USER --password-stdin
+
 
 build_image:
   stage: build
