@@ -13,10 +13,12 @@ before_script:
   - echo $VERSION_DE_MI_APP
   - echo $CI_COMMIT_SHORT_SHA
   - echo "Iniciando pipeline y verificando Docker...00"
+  - apt-get update && apt-get install -y docker.io  # Instalar Docker en la imagen de Node.js
   - docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
 
 build_image:
   stage: build
+  image: node:latest  # Usa una imagen de Node.js para tener npm disponible
   tags:
     - docker_shell
   script:
@@ -27,6 +29,7 @@ build_image:
 
 push_image:
   stage: publish_image
+  image: docker:latest  # Cambia a docker:latest para la etapa de push
   tags:
     - docker_shell
   script:
