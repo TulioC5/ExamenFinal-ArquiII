@@ -12,7 +12,7 @@ before_script:
   - echo $IMAGE_NAME
   - echo $VERSION_DE_MI_APP
   - echo $CI_COMMIT_SHORT_SHA
-  - echo "Iniciando pipeline y verificando Docker...0"
+  - echo "Iniciando pipeline y verificando Docker...00"
   #- docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
 
 build_image:
