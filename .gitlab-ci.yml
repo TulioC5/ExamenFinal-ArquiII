@@ -9,7 +9,7 @@ variables:
 
 before_script:
   - echo $CI_JOB_TOKEN
-  - echo $IMAGE_NAME
+  - echo $IMAGE_NAME:$IMAGE_TAG
   - echo $VERSION_DE_MI_APP
   - echo $CI_COMMIT_SHORT_SHA
   - echo "Iniciando pipeline y verificando Docker...00"
@@ -22,7 +22,7 @@ build_image:
   tags:
     - docker_shell
   script:
-    - echo "Building stageee. .."
+    - echo "Building stageeee. .."
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
 
 push_image:
