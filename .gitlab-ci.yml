@@ -9,12 +9,11 @@ variables:
 
 before_script:
   - echo $CI_JOB_TOKEN
-  - echo $IMAGE_NAME:$IMAGE_TAG 
+  - echo $IMAGE_NAME
   - echo $VERSION_DE_MI_APP
   - echo $CI_COMMIT_SHORT_SHA
   - echo "Iniciando pipeline y verificando Docker...00"
-  # - docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
-  - echo $NEXUS_PASSWORD | docker login $NEXUS_HOST -u $NEXUS_USER --password-stdin
+  - docker login $NEXUS_HOST -u $NEXUS_USER -p $NEXUS_PASSWORD
   # otros comandos
 
 
