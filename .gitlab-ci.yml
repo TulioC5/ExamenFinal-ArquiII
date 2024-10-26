@@ -18,18 +18,16 @@ before_script:
 
 build_image:
   stage: build
-  image: node:latest  # Usa una imagen de Node.js para tener npm disponible
+  image: docker:latest  # Cambia a docker:latest para construir la imagen Docker con el Dockerfile
   tags:
     - docker_shell
   script:
-    - echo "Instalando dependencias de Node.js..."
-    - npm install  # Este comando instalará las dependencias de Node.js
-    - echo "Building image..."
+    - echo "Building Docker image..."
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
 
 push_image:
   stage: publish_image
-  image: docker:latest  # Cambia a docker:latest para la etapa de push
+  image: docker:latest  # Usa docker:latest para la etapa de push
   tags:
     - docker_shell
   script:
