@@ -1,9 +1,13 @@
 FROM node:latest
 WORKDIR /app
 
+# Copia solo los archivos de package.json y package-lock.json primero
 COPY package*.json ./
-RUN npm install  # Instala las dependencias dentro del contenedor Docker
 
+# Elimina cualquier instalación previa de sqlite3 y reinstala
+RUN npm install sqlite3 && npm install
+
+# Copia el resto del código fuente
 COPY . .
 
 EXPOSE 3000
