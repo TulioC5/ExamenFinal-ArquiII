@@ -30,7 +30,7 @@ push_image:
   tags:
     - docker_shell
   script:
-    - echo "Pushing stage..."
+    - echo "Pushing stage...."
     - docker push $IMAGE_NAME:$IMAGE_TAG
     - echo "Pushing stage...2"
    
