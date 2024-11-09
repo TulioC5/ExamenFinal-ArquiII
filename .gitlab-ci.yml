@@ -22,7 +22,7 @@ build_image:
   tags:
     - docker_shell
   script:
-    - echo "Building Docker image..."
+    - echo "Building Docker image arqui2-final..."
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
 
 push_image:
@@ -31,6 +31,7 @@ push_image:
   tags:
     - docker_shell
   script:
-    - echo "Pushing image to Nexus..."
+    - echo "Pushing image arqui2-final to Nexus..."
     - docker push $IMAGE_NAME:$IMAGE_TAG
-    - echo "Imagen subida correctamente."
+    - echo "Imagen arqui2-final subida correctamente."
+

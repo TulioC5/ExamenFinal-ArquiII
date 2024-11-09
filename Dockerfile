@@ -11,4 +11,4 @@ RUN npm install sqlite3 && npm install
 COPY . .
 
 EXPOSE 3000
-CMD ["node", "app.js"]
+CMD ["node", "Arquitectura-9598.js"]
